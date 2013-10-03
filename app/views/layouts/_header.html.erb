@@ -1,0 +1,29 @@
+<header class="navbar navbar-inverse" id="mydiv" >
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12"> 
+          <div class="span4">
+            <h3> <%= link_to "White Horse", '#', id: "logo" %></h3>
+          </div>
+          <div class="span2"%></div>
+          <div class="span2"><%= image_tag("atom_logo_sm.jpg", size: "60x60") %></div>
+          <div class="span4">
+            <nav>
+              <ul class="nav pull-right">
+                <li class="jumper"><%= link_to "Contact",'#contact'  %></li>
+                <li class="jumper"><%= link_to "Our Work",'#our_works' %></li>
+                <li class="jumper"><%= link_to "Home", '#home' %></li>
+                <li class="jumper"><%= link_to "What We Do", '#what_we_do' %></li>
+              </ul>	
+            </nav>
+          </div>  
+    </div> 
+  </div>
+</header>
+<style>
+.navbar-inverse .navbar-inner{
+background-image:none;
+background: #CCC;
+}
+</style>
