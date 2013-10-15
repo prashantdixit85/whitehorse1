@@ -9,7 +9,7 @@
           <div class="span2"%></div>
           <div class="span4">
             <nav>
-              <ul class="nav pull-right">
+              <ul class="nav pull-right diplay">
                 <li class="jumper"><%= link_to "Contact",'#contact'  %></li>
                 <li class="jumper"><%= link_to "Our Work",'#our_works' %></li>
                 <li class="jumper"><%= link_to "Home", '#home' %></li>
@@ -32,6 +32,9 @@
 .boxes {
      position: absolute;
 }
+.navbar .nav.pull-right{
+  padding-left:10px;
+}
 .fixed {
     position: fixed;
     top: 0px;
@@ -42,5 +45,8 @@
 }
 .navbar-inverse .navbar-inner{
    background: #414C48;
+}
+.diplay{
+  margin-left: 10px;
 }
 </style>
