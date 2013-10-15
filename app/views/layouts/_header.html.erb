@@ -1,13 +1,12 @@
 <header class="navbar navbar-inverse" id="mydiv" >
   <div class="navbar-inner">
     <div class="container">
-      <div class="row-fluid">
+      <div class="row-fluid box">
         <div class="span12"> 
           <div class="span4">
-            <h3> <%= link_to "White Horse", '#', id: "logo" %></h3>
+            <h2> <%= link_to "White Horse", '#', id: "logo" %></h2>
           </div>
           <div class="span2"%></div>
-          <div class="span2"><%= image_tag("atom_logo_sm.jpg", size: "60x60") %></div>
           <div class="span4">
             <nav>
               <ul class="nav pull-right">
@@ -21,9 +20,27 @@
     </div> 
   </div>
 </header>
+<script>
+  $(window).scroll(function (event) {
+    var top = $('.box').offset().top;
+    var y = $(this).scrollTop();
+    if (y >= 730 ) { $('.box').addClass('fixed');}
+    else { $('.box').removeClass('fixed');}
+  }); 
+</script>
 <style>
+.boxes {
+     position: absolute;
+}
+.fixed {
+    position: fixed;
+    top: 0px;
+    background:#414C48;
+    width: 110%;
+    margin-left: -22px;
+
+}
 .navbar-inverse .navbar-inner{
-background-image:none;
-background: #CCC;
+   background: #414C48;
 }
 </style>
