@@ -4,29 +4,33 @@
       <div class="row-fluid box">
         <div class="span12"> 
           <div class="span4">
-            <h2> <%= link_to "White Horse", '#', id: "logo" %></h2>
+            <h2><%= link_to "Xemoff.com",'#', id: "logo" %></h2>
           </div>
           <div class="span2"%></div>
           <div class="span4">
             <nav>
               <ul class="nav pull-right diplay">
-                <li class="jumper"><%= link_to "Contact",'#contact'  %></li>
-                <li class="jumper"><%= link_to "Our Work",'#our_works' %></li>
-                <li class="jumper"><%= link_to "Home", '#home' %></li>
-                <li class="jumper"><%= link_to "What We Do", '#what_we_do' %></li>
+                <li id="contact"class="jumper" ><h5>Contact</h5></li>
               </ul>	
             </nav>
           </div>  
     </div> 
   </div>
 </header>
+<div class="show_contact" style="display:none;">
+  <%= render :partial => "users/form" %>
+</div> 
+
 <script>
   $(window).scroll(function (event) {
     var top = $('.box').offset().top;
     var y = $(this).scrollTop();
     if (y >= 730 ) { $('.box').addClass('fixed');}
     else { $('.box').removeClass('fixed');}
-  }); 
+    $("#contact").click(function(){
+      $(".show_contact").toggle();
+    });
+  });
 </script>
 <style>
 .boxes {
@@ -41,12 +45,21 @@
     background:#414C48;
     width: 110%;
     margin-left: -22px;
-
+}
+.fixed h2 {
+  padding-left:23px;
+}
+.fixed h5 {
+margin-right: 102px;
 }
 .navbar-inverse .navbar-inner{
-   background: #414C48;
+  background: #414C48;
+  margin-left: -22px;
 }
 .diplay{
   margin-left: 10px;
+}
+.jumper{
+  padding-right: 10px;
 }
 </style>

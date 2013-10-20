@@ -1,29 +1,25 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :ph_no %><br />
-    <%= f.text_field :ph_no %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div id="form_customer">
+  <form>
+    <fieldset>
+      <legend>Contact:</legend>
+      Name: <input type="text" size="30"><br>
+      Ph.Nu:<input type="text" size="30"><br/>
+      email: <input type="text" size="30"><br>
+      contxt: <input type="text"><br/>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</div>
+<style>
+  #form_customer{
+    border:2px solid #a1a1a1;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:45px;
+    padding-left:50px; 
+    background:#dddddd;
+    width:400px;
+    border-radius:30px;
+    margin-left:21px;
+  }
+</style>
