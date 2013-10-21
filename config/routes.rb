@@ -8,7 +8,8 @@ Whitehorse::Application.routes.draw do
   get "static_pages/contact"
 
   resources :users
-
+  match "/search" => 'users#index'
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
