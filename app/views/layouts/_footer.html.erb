@@ -1,19 +1,42 @@
 <footer class="navbar navbar-inverse">
   <div class="navbar-inner">
-   <div class="row-fluid">
-      <div class="span12"> 
-        <div class="span4 invent">
-          <h1></h1><p>abhishek.p906@gmail.com</p>
+    <div class="row-fluid">
+      <div class="span12 conatiner">
+        <div class="row">
+          <div class="span12">
+            <div class="title_page">
+              <h2 class="title">Say Hello! </h2>
+              <h3 class="title_description">Drop by at our office, send us an email or give us a call: <h3>
+            </div>
+          </div>
         </div>
-        <label><div class="span4 site_links"><a href="#"><Xemoff class="com"></Xemoff>
-</a></div></label>
-        <div class="links_footer span4">
-          <ul>
-            <li><%= link_to "About",'#' %></li>
-            <li><%= link_to "Contact",'#' %></li>
-            <li><a href="#">"User"</a></li>
-          </ul>
-        </div>
+
+        <div class="row">
+          <div class="span5">
+            <div class="contact-details">
+              <ul>
+                <li>
+                 Xemoff pvt ltd <br>
+                  Tower 11, Orange County,<br>
+                    Indirapuram<br>
+                    Ghaziabad, 201014<br>     
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="span3 services_box">
+            <div class="contact-details orangetext"><label> abhishek@xemoff.com</label></div>
+          </div>
+          <div class="span3 services_box">
+            <div class="contact-details">
+              <ul>
+                <li>+91-85878-68769</li><br>
+                <li><h5>email</h5></li>
+                <li><div class="show_contact" style="display:none;"><%= render :partial => "users/form"%></div></li>
+              </ul>
+            </div>
+          </div>
+        </div> 
       </div>
     </div>
   </div>
@@ -25,11 +48,24 @@
   color:#CEC6C6;
 }
 .navbar-inner .links_footer ul li, .navbar-inner .site_links, .invent b, #mydiv{ 
-    color: #AEAEAE;
     display: block;
     font-size: 16px;
     font-weight: 300;
     line-height: 60px;
     text-transform: uppercase;
   }
-</style>
+ footer ul {
+  float: left;
+ }
+ footer .title_page{
+  padding-left: 15px;
+ }
+
+</style>  
+<script>
+$(document).ready(function(){
+   $("h5").click(function(){
+    $(".show_contact").toggle();
+    });
+});
+</script>

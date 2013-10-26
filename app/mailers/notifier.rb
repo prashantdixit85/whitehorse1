@@ -2,7 +2,7 @@ class Notifier < ActionMailer::Base
 
   def send_query(user)
     @user = user
-    mail to: "dixitprashant855@gmail.com", from: @user.email, subject: "Query of Organisation"
+    mail to: "abhishek@xemoff.com", from: @user.email, subject: "Query of Organisation"
          
   end
 
@@ -13,6 +13,6 @@ class Notifier < ActionMailer::Base
   #
   def recrive_query(user)
      @user = user
-    mail to: @user.email, from: "dixitprashant855@gmail.com", subject: "Thanks for Query"
+    mail to: @user.email, from: "abhishek@xemoff.com", subject: "Thanks for Query"
   end
 end

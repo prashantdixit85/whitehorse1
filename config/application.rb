@@ -67,8 +67,8 @@ module Whitehorse
             :port => 587,
             :domain => "gmail.com",
             :authentication => "plain" ,
-            :user_name => "dixitprashant855@gmail.com" ,
-            :password=> "prashant123" ,
+            :user_name => "info.xemoff@gmail.com" ,
+            :password=> "xemoff123" ,
             :enable_starttls_auto => true
         } 
     end
