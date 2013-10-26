@@ -38,6 +38,7 @@ gem 'jquery-rails'
  gem 'debugger'
 
 gem 'bootstrap-sass'
+gem 'capistrano'
 # group :production do
 #   gem 'pg'
 #   gem 'rails_12factor', '0.0.2' 	

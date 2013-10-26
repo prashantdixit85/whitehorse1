@@ -3,11 +3,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @user = User.new
-    @user.name = params[:name]
-    @user.email = params[:email]
-    @user.context = params[:context]
-    @user.ph_no = params[:phone_number]
-    @user.save
+    @user.set_user(params)
     respond_to do |format|
       Notifier.send_query(@user).deliver
       Notifier.recrive_query(@user).deliver
