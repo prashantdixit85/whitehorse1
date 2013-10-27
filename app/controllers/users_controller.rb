@@ -5,8 +5,6 @@ class UsersController < ApplicationController
     @user = User.new
     @user.set_user(params)
     respond_to do |format|
-      Notifier.send_query(@user).deliver
-      Notifier.recrive_query(@user).deliver
       format.html # index.html.erb
       format.json { render json: @users }
     end
