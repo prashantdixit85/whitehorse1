@@ -1,12 +1,12 @@
 <div id="form_customer">
   <%= form_tag("/search", :method => "post") do %>
-    <%= label_tag(:name, "Name") %>
+    <%= label_tag(:name, "Name*") %>
     <%= text_field_tag(:name) %>
-    <%= label_tag(:phone_number, "Ph.Number") %>
+    <%= label_tag(:phone_number, "Ph.Number*") %>
     <%= text_field_tag(:phone_number) %>
-    <%= label_tag(:email, "Email") %>
+    <%= label_tag(:email, "Email*") %>
     <%= email_field_tag(:email) %>
-    <%= label_tag(:context, "Contxt") %>
+    <%= label_tag(:context, "Context*") %>
     <%= text_area_tag(:context) %> <br/>
     <%= submit_tag("Submit") %>
   <% end %>
